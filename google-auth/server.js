@@ -4,13 +4,13 @@ const cors = require("cors");
 const passport = require("passport");
 const authRoute = require("./routes/auth");
 const cookieSession = require("cookie-session");
-const passportStrategy = require("./passport");
+const passport = require("./passport");
 const app = express();
 
 app.use(
 	cookieSession({
 		name: "session",
-		keys: ["cyberwolve"],
+		keys: ["tummoc"],
 		maxAge: 24 * 60 * 60 * 100,
 	})
 );
@@ -20,7 +20,7 @@ app.use(passport.session());
 
 app.use(
 	cors({
-		origin: "http://localhost:3000",
+		origin: "https://tummoc-webapp.netlify.app/",
 		methods: "GET,POST,PUT,DELETE",
 		credentials: true,
 	})
