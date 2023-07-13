@@ -20,7 +20,7 @@ app.use(passport.session());
 
 app.use(
 	cors({
-		origin: "https://tummoc-webapp.netlify.app/",
+		origin: "https://tummoc-webapp.netlify.app",
 		methods: "GET,POST,PUT,DELETE",
 		credentials: true,
 	})
