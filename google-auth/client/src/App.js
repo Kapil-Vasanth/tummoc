@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
 	const [user, setUser] = useState(null);
-
+	console.log(user)
 	const getUser = async () => {
 		try {
 			const url = `${process.env.REACT_APP_API_URL}/auth/login/success`;
